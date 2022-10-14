@@ -7,7 +7,8 @@ extend_metadata(){
 }
 
 extend_data(){
-  lvresize -L +50G fedora_localhost-live/pool00_tdata
+  lvresize -L +50G fedora_localhost-live/pool00
+#   lvresize -L +50G fedora_localhost-live/pool00_tdata # Doesn't work
 }
 
 
