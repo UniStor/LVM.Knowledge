@@ -1,21 +1,24 @@
 # Get disk
 lsblk
 disk=vdb
-vg=vgsys
-lv=lvol0
+# sudo vgs
+vg=ubuntu-vg
+# sudo lvs
+lv=ubuntu-lv
 
 pvcreate /dev/$disk
 
-vgextend vgsys /dev/$disk
-vgs
+vgextend $vg /dev/$disk
 
 lvextend -l +100%FREE /dev/$vg/$lv
-lvs
 
 # Btrfs can resize Root in-place and live!
 btrfs filesystem resize max /
 
 sudo reboot # Maybe unnecessary
 
-# Test()
-df -h .
+test(){
+  df -h .
+  vgs
+  lvs
+}
