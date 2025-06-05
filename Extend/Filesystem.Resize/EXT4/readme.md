@@ -1,6 +1,7 @@
+# EXT4 uses ResizeFS, an external tool
 sch: https://www.google.com/search?q=ext4+resize https://www.google.com/search?q=resize2fs+ext4+root
 
-# Solution:
+## Solution:
 https://serverfault.com/questions/509468/how-to-extend-an-ext4-partition-and-filesystem
 
 more:
